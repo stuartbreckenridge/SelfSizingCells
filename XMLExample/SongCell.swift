@@ -27,5 +27,14 @@ class SongCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // MARK: Required for self-sizing cells and device orientation
+        self.songLabel.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
+        self.rightsLabel.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
+        
+    }
 
 }

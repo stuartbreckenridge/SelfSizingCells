@@ -15,7 +15,7 @@ This is custom subclass of `UITableViewCell`.
 
 It contains two labels for Song Title and Song Rights.
 
-In `func awakeFromNib()` there is code related to ensuring that the cells will self-size correctly with multiple `UILabel`s:
+In `func awakeFromNib()` and `func layoutSubviews()` there is code related to ensuring that the cells will self-size correctly with multiple `UILabel`s:
 
 `self.songLabel.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
 

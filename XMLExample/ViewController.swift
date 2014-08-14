@@ -8,18 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController, XMLParserNotifications, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController {
     
     var theSongs = [Song]()
     @IBOutlet weak var songTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        songTableView.dataSource = self
-        songTableView.delegate = self
-        songTableView.estimatedRowHeight = 70.0
-        songTableView.rowHeight = UITableViewAutomaticDimension
+        // Do any additional setup after loading the view, typically from a nib.      
+        
+        self.songTableView.dataSource = self
+        self.songTableView.delegate = self
+        self.songTableView.estimatedRowHeight = 70.0
+        self.songTableView.rowHeight = UITableViewAutomaticDimension
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
             var aParser = XMLParser()
@@ -35,22 +36,22 @@ class ViewController: UIViewController, XMLParserNotifications, UITableViewDataS
     }
 }
 
-// XMLParserNotifications
-extension ViewController
+
+extension ViewController: XMLParserNotifications
 {
     func didFinishParsingDocument(songs:[Song])
     {
         theSongs = songs
-        songTableView.reloadData()
+        self.songTableView.reloadData()
     }
 }
 
-// UITableViewDataSource
-extension ViewController
+
+extension ViewController: UITableViewDataSource
 {
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
-        return theSongs.count
+        return self.theSongs.count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
@@ -65,6 +66,13 @@ extension ViewController
         cell.rightsLabel.text = song.songRights
        
         return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate
+{
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
