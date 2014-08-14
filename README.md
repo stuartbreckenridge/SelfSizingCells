@@ -1,7 +1,7 @@
 SwiftXMLandSelfSizingCells
 ==========================
 
-This app is an example of parsing XML (the top 30 iTunes Song list) with Swift and self-sizing cells. 
+>This app is an example of parsing XML (the top 30 iTunes Song list) with Swift and self-sizing cells. It is a work in progress because self-sizing cells are still a little buggy.
 
 ###XMLParser.swift
 
