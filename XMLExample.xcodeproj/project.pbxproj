@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF2E342D199E58E6005CF5E0 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E342C199E58E6005CF5E0 /* ViewControllerExtensions.swift */; };
 		DF51A5B2199A4E6B0096C132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF51A5B1199A4E6B0096C132 /* AppDelegate.swift */; };
 		DF51A5B4199A4E6B0096C132 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF51A5B3199A4E6B0096C132 /* ViewController.swift */; };
 		DF51A5B7199A4E6B0096C132 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF51A5B5199A4E6B0096C132 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF2E342C199E58E6005CF5E0 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		DF51A5AC199A4E6B0096C132 /* XMLExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMLExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF51A5B0199A4E6B0096C132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF51A5B1199A4E6B0096C132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				DF51A5B3199A4E6B0096C132 /* ViewController.swift */,
+				DF2E342C199E58E6005CF5E0 /* ViewControllerExtensions.swift */,
 				DF9229FD199C32F100B79DA9 /* AppCell.swift */,
 			);
 			name = "View Controllers";
@@ -235,6 +238,7 @@
 				DF9229FE199C32F100B79DA9 /* AppCell.swift in Sources */,
 				DF51A5B4199A4E6B0096C132 /* ViewController.swift in Sources */,
 				DF51A5B2199A4E6B0096C132 /* AppDelegate.swift in Sources */,
+				DF2E342D199E58E6005CF5E0 /* ViewControllerExtensions.swift in Sources */,
 				DF51A5CF199A4E830096C132 /* XMLParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
