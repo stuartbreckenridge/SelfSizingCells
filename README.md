@@ -1,43 +1,50 @@
 SwiftXMLandSelfSizingCells
 ==========================
 
->This app is an example of parsing XML (the top 30 iTunes Song list) with Swift and self-sizing cells. It is a work in progress because self-sizing cells are still a little buggy.
+>This app is an example of parsing XML (the top 25 iTunes Apps list) with Swift and self-sizing cells. It is a work in progress because self-sizing cells are still a little buggy. **If you find bugs, please raise issues.**
+
 
 ###XMLParser.swift
 
-This class contains one protocol, `XMLParserNotifications`, which contains one delegate method: `func didFinishParsingDocument(songs:[Song])`. This is used to notify delegates that parsing has finished and passes an array of parsed `[Song]`s.
+This class contains one protocol, `XMLParserNotifications`, which contains one delegate method: `func didFinishParsingDocument(songs:[Song])`. This is used to notify delegates that parsing has finished and passes an array of parsed `[App]`s.
 
-A `Song` is a `struct` that contains a parsed song title and the song rights.
+A `App` is a `struct` that contains a parsed app name, summary, price and rights
 
-###SongCell.swift
+###AppCell.swift
 
 This is custom subclass of `UITableViewCell`.
 
-It contains two labels for Song Title and Song Rights.
+It contains four labels for an app's name, summary, price and rights.
 
 In `func awakeFromNib()` and `func layoutSubviews()` there is code related to ensuring that the cells will self-size correctly with multiple `UILabel`s:
 
-`self.songLabel.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
+`// MARK: Required for self-sizing cells.`
 
-`self.rightsLabel.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
+`self.appName.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
+
+`self.appRights.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
+
+`self.appPrice.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
+
+`self.appSummary.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
 
 Commenting out any of the above will break self-sizing.
 
-**N.B.**:`songLabel` and `rightsLabel` have their `numberOfLines` variable set to 0 in Storyboard.
+**N.B.**:All labels have their `numberOfLines` variable set to 0 in Storyboard.
 
 
 ###ViewController.swift
 
-The view controller is a `XMLParserNotifications` delegate. When it receives the `didFinishParsingDocument(songs:[Song])` call it reloads its table view.
+The view controller is a `XMLParserNotifications` delegate. When it receives the ` func didFinishParsingApps(apps:[App])` call it reloads its table view.
 
 The following two lines of code are required for self-sizing cells:
 
-`songTableView.estimatedRowHeight = 70.0`
+`appTableView.estimatedRowHeight = 110.0`
 
-`songTableView.rowHeight = UITableViewAutomaticDimension`
+`appTableView.rowHeight = UITableViewAutomaticDimension`
 
 ###Result:
-<center><img src="https://www.dropbox.com/s/6qma737gklclw88/iOS%20Simulator%20Screen%20Shot%2014%20Aug%202014%208.38.38%20am.png?dl=1" width="320px" height="568px" /></center>
+![Image](https://www.dropbox.com/s/npr771sgdqumyi6/iOS%20Simulator%20Screen%20Shot%2015%20Aug%202014%209.28.31%20am.png?dl=1)
 
 
 

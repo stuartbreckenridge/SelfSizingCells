@@ -10,24 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var theSongs = [Song]()
-    @IBOutlet weak var songTableView: UITableView!
+    var theApps = [App]()
+    @IBOutlet weak var appTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.      
         
-        self.songTableView.dataSource = self
-        self.songTableView.delegate = self
-        self.songTableView.estimatedRowHeight = 70.0
-        self.songTableView.rowHeight = UITableViewAutomaticDimension
+        self.appTableView.dataSource = self
+        self.appTableView.delegate = self
+        self.appTableView.estimatedRowHeight = 110.0
+        self.appTableView.rowHeight = UITableViewAutomaticDimension
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
             var aParser = XMLParser()
             aParser.delegate = self
             aParser.parseXML()
         })
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +38,10 @@ class ViewController: UIViewController {
 
 extension ViewController: XMLParserNotifications
 {
-    func didFinishParsingDocument(songs:[Song])
+    func didFinishParsingApps(apps:[App])
     {
-        theSongs = songs
-        self.songTableView.reloadData()
+        self.theApps = apps
+        self.appTableView.reloadData()
     }
 }
 
@@ -51,19 +50,21 @@ extension ViewController: UITableViewDataSource
 {
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
-        return self.theSongs.count
+        return self.theApps.count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
         let cellIdentifier = "Cell"
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as SongCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as AppCell
         
-        var song = theSongs[indexPath.row] as Song
+        var app = theApps[indexPath.row] as App
         
-        cell.songLabel.text = song.songTitle
-        cell.rightsLabel.text = song.songRights
+        cell.appName.text = app.appName
+        cell.appPrice.text = app.appPrice
+        cell.appRights.text = app.appRights
+        cell.appSummary.text = app.appSummary
        
         return cell
     }

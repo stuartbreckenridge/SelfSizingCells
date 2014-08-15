@@ -10,19 +10,21 @@ import Foundation
 
 protocol XMLParserNotifications
 {
-    func didFinishParsingDocument(songs:[Song])
+    func didFinishParsingApps(apps:[App])
 }
 
 class XMLParser: NSObject, NSXMLParserDelegate {
    
     // Constants
-    let xmlURLEndpoint:NSURL = NSURL.URLWithString("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topsongs/limit=30/xml")
+    let xmlURLEndpoint:NSURL = NSURL.URLWithString("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=25/xml")
     
     //Variables
-    var title = String()
-    var rights = String()
+    var aName = String()
+    var aSummary = String()
+    var aPrice = String()
+    var aRights = String()
     var currentElement = String()
-    var songArray = [Song]()
+    var appArray = [App]()
     var delegate: XMLParserNotifications?
     
     // MARK: Parse XML
@@ -42,8 +44,10 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         // Start of entry. Reset title/rights
         if  (elementName == "entry")
         {
-            title = ""
-            rights = ""
+            aRights = ""
+            aName = ""
+            aSummary = ""
+            aPrice = ""
         }
     }
     
@@ -52,12 +56,22 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         // Append characters found from current element
         if  (currentElement == "title")
         {
-            title += string
+            aName += string
         }
         
-        else if (currentElement == "rights")
+        if (currentElement == "summary")
         {
-            rights += string
+            aSummary += string
+        }
+            
+        if (currentElement == "rights")
+        {
+            aRights += string
+        }
+            
+        if (currentElement == "im:price")
+        {
+            aPrice += string
         }
     }
     
@@ -66,24 +80,29 @@ class XMLParser: NSObject, NSXMLParserDelegate {
         // Finished parsing entry...create Song struct
         if  (elementName == "entry")
         {
-            var aSong = Song(songTitle: title, songRights: rights)
-            songArray.append(aSong)
+            var anApp = App(appName: aName, appSummary: aSummary, appPrice: aPrice, appRights: aRights)
+            appArray.append(anApp)
         }
         currentElement = ""
     }
     
     func parserDidEndDocument(parser: NSXMLParser!) {
         dispatch_async(dispatch_get_main_queue(), {
-           self.delegate?.didFinishParsingDocument(self.songArray)
+            self.delegate?.didFinishParsingApps(self.appArray)
         ()
         })
     }
 }
 
 
-struct Song{
-    var songTitle = String()
-    var songRights = String()
+
+
+struct App
+{
+    var appName = String()
+    var appSummary = String()
+    var appPrice = String()
+    var appRights = String()
 }
 
 

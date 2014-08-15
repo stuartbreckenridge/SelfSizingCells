@@ -5,7 +5,7 @@
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Songs-->
+        <!--Apps-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="XMLExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,41 +17,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pV2-Mf-YSQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pV2-Mf-YSQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="70" id="7bG-ad-eTT" customClass="SongCell" customModule="XMLExample" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="110" id="7bG-ad-eTT" customClass="AppCell" customModule="XMLExample" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7bG-ad-eTT" id="19m-2u-QDb">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-wF-aua" userLabel="SongTitle">
-                                                    <rect key="frame" x="8" y="16" width="584" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-wF-aua" userLabel="appName">
+                                                    <rect key="frame" x="8" y="10" width="584" height="20"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-uJ-pFS" userLabel="SongRights">
-                                                    <rect key="frame" x="8" y="36" width="584" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-uJ-pFS" userLabel="appSummary">
+                                                    <rect key="frame" x="8" y="60" width="584" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="HNN-vO-a7W" userLabel="appRights">
+                                                    <rect key="frame" x="8" y="85" width="584" height="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" red="0.77470876479289941" green="0.77470876479289941" blue="0.77470876479289941" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-31-wSk" userLabel="appPrice">
+                                                    <rect key="frame" x="8" y="37" width="584" height="15"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eWy-uJ-pFS" secondAttribute="bottom" constant="8" id="0tS-7b-ecL"/>
-                                                <constraint firstItem="eWy-uJ-pFS" firstAttribute="top" secondItem="2yo-wF-aua" secondAttribute="bottom" id="A6p-M4-VdU"/>
-                                                <constraint firstItem="2yo-wF-aua" firstAttribute="leading" secondItem="19m-2u-QDb" secondAttribute="leadingMargin" id="Ae2-7M-QEh"/>
-                                                <constraint firstItem="eWy-uJ-pFS" firstAttribute="leading" secondItem="19m-2u-QDb" secondAttribute="leadingMargin" id="Kne-45-d6B"/>
-                                                <constraint firstItem="2yo-wF-aua" firstAttribute="trailing" secondItem="19m-2u-QDb" secondAttribute="trailingMargin" id="hcG-Wl-Umw"/>
-                                                <constraint firstItem="2yo-wF-aua" firstAttribute="top" secondItem="19m-2u-QDb" secondAttribute="topMargin" constant="8" id="jMP-wE-NOu"/>
-                                                <constraint firstItem="eWy-uJ-pFS" firstAttribute="trailing" secondItem="19m-2u-QDb" secondAttribute="trailingMargin" id="yqR-Ri-yER"/>
+                                                <constraint firstItem="eWy-uJ-pFS" firstAttribute="trailing" secondItem="19m-2u-QDb" secondAttribute="trailingMargin" id="1kP-4s-sbf"/>
+                                                <constraint firstItem="bKK-31-wSk" firstAttribute="leading" secondItem="19m-2u-QDb" secondAttribute="leadingMargin" id="Byy-jq-Bkz"/>
+                                                <constraint firstItem="HNN-vO-a7W" firstAttribute="leading" secondItem="19m-2u-QDb" secondAttribute="leadingMargin" id="CyN-Q2-hOO"/>
+                                                <constraint firstItem="HNN-vO-a7W" firstAttribute="trailing" secondItem="19m-2u-QDb" secondAttribute="trailingMargin" id="Hbb-9y-G6l"/>
+                                                <constraint firstItem="bKK-31-wSk" firstAttribute="trailing" secondItem="19m-2u-QDb" secondAttribute="trailingMargin" id="QiA-fg-gDS"/>
+                                                <constraint firstItem="eWy-uJ-pFS" firstAttribute="top" secondItem="bKK-31-wSk" secondAttribute="bottom" constant="8" id="ZVr-Hl-zd4"/>
+                                                <constraint firstItem="2yo-wF-aua" firstAttribute="top" secondItem="19m-2u-QDb" secondAttribute="topMargin" constant="2" id="a6f-Dr-fhX"/>
+                                                <constraint firstItem="2yo-wF-aua" firstAttribute="leading" secondItem="19m-2u-QDb" secondAttribute="leadingMargin" id="bE0-Iu-i9d"/>
+                                                <constraint firstItem="2yo-wF-aua" firstAttribute="trailing" secondItem="19m-2u-QDb" secondAttribute="trailingMargin" id="cqY-Xw-qS8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="HNN-vO-a7W" secondAttribute="bottom" constant="-1" id="ppI-j0-bfF"/>
+                                                <constraint firstItem="HNN-vO-a7W" firstAttribute="top" secondItem="eWy-uJ-pFS" secondAttribute="bottom" constant="8" id="rfh-85-Lm9"/>
+                                                <constraint firstItem="bKK-31-wSk" firstAttribute="top" secondItem="2yo-wF-aua" secondAttribute="bottom" constant="7" id="w8C-xh-Icg"/>
+                                                <constraint firstItem="eWy-uJ-pFS" firstAttribute="leading" secondItem="19m-2u-QDb" secondAttribute="leadingMargin" id="xxP-mk-zIh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="rightsLabel" destination="eWy-uJ-pFS" id="pid-4u-z0v"/>
-                                            <outlet property="songLabel" destination="2yo-wF-aua" id="AWH-aR-mGL"/>
+                                            <outlet property="appName" destination="2yo-wF-aua" id="o8x-Md-x1H"/>
+                                            <outlet property="appPrice" destination="bKK-31-wSk" id="CNl-9b-pW3"/>
+                                            <outlet property="appRights" destination="HNN-vO-a7W" id="zz7-la-6fh"/>
+                                            <outlet property="appSummary" destination="eWy-uJ-pFS" id="YKD-sf-GpI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -65,14 +85,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="pV2-Mf-YSQ" secondAttribute="trailing" constant="-16" id="qee-dO-rCh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Songs" id="qgd-0E-dfV"/>
+                    <navigationItem key="navigationItem" title="Apps" id="qgd-0E-dfV"/>
                     <connections>
-                        <outlet property="songTableView" destination="pV2-Mf-YSQ" id="skI-5D-3ud"/>
+                        <outlet property="appTableView" destination="pV2-Mf-YSQ" id="LXZ-oh-QDa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="270"/>
+            <point key="canvasLocation" x="1117" y="266"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eu4-GD-whx">
