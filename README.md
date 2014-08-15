@@ -6,7 +6,7 @@ SwiftXMLandSelfSizingCells
 
 ###XMLParser.swift
 
-This class contains one protocol, `XMLParserNotifications`, which contains one delegate method: `func didFinishParsingDocument(songs:[Song])`. This is used to notify delegates that parsing has finished and passes an array of parsed `[App]`s.
+This class contains one protocol, `XMLParserNotifications`, which contains one delegate method: `func didFinishParsingApps(apps:[App])`. This is used to notify delegates that parsing has finished and passes an array of parsed `[App]`s.
 
 A `App` is a `struct` that contains a parsed app name, summary, price and rights
 
@@ -35,7 +35,7 @@ Commenting out any of the above will break self-sizing.
 
 ###ViewController.swift
 
-The view controller is a `XMLParserNotifications` delegate. When it receives the ` func didFinishParsingApps(apps:[App])` call it reloads its table view.
+The view controller is a `XMLParserNotifications` delegate. When it receives the `func didFinishParsingApps(apps:[App])` call it reloads its table view.
 
 The following two lines of code are required for self-sizing cells:
 
