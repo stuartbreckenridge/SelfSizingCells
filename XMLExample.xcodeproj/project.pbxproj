@@ -41,6 +41,7 @@
 		DF51A5CE199A4E830096C132 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		DF9229FD199C32F100B79DA9 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
 		DF922A03199C3FF300B79DA9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DFB4099319A364FF005E5752 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		DF51A5A3199A4E6B0096C132 = {
 			isa = PBXGroup;
 			children = (
+				DFB4099319A364FF005E5752 /* License.md */,
 				DF922A03199C3FF300B79DA9 /* README.md */,
 				DF51A5AE199A4E6B0096C132 /* XMLExample */,
 				DF51A5C1199A4E6B0096C132 /* XMLExampleTests */,

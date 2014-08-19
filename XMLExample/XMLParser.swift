@@ -95,8 +95,14 @@ class XMLParser: NSObject, NSXMLParserDelegate {
 }
 
 
+/**
+App is a struct of parsed XML data.
 
-
+:param: appName - parsed name of the app.
+:param: appSummary - parsed summary of the app.
+:param: appPrice - parsed price of the app.
+:param: appRights - parsed rights of the app.
+*/
 struct App
 {
     var appName = String()
