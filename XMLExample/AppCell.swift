@@ -41,4 +41,27 @@ class AppCell: UITableViewCell {
         self.appPrice.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
         self.appSummary.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
     }
+    
+    func populateCell(#appData:App)
+    {
+        self.appName.text = appData.appName
+        self.appName.accessibilityLabel = "Application Name"
+        self.appName.accessibilityValue = appData.appName
+        self.appName.isAccessibilityElement = true
+        
+        self.appPrice.text = appData.appPrice
+        self.appPrice.accessibilityLabel = "Application Price in U.S. Dollars"
+        self.appPrice.accessibilityValue = appData.appPrice
+        self.appPrice.isAccessibilityElement = true
+        
+        self.appRights.text = appData.appRights
+        self.appRights.accessibilityLabel = "Application Rights Holder"
+        self.appRights.accessibilityValue = appData.appRights
+        self.appRights.isAccessibilityElement = true
+        
+        self.appSummary.text = appData.appSummary
+        self.appSummary.accessibilityLabel = "Application Description"
+        self.appSummary.accessibilityValue = appData.appSummary
+        self.appSummary.isAccessibilityElement = true
+    }
 }

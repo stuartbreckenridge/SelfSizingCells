@@ -23,11 +23,7 @@ extension ViewController: UITableViewDataSource
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as AppCell
         
         var app = theApps[indexPath.row] as App
-        
-        cell.appName.text = app.appName
-        cell.appPrice.text = app.appPrice
-        cell.appRights.text = app.appRights
-        cell.appSummary.text = app.appSummary
+        cell.populateCell(appData:app)
         
         return cell
     }
