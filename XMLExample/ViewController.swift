@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         })
     }
     
-    @objc private func didChangeSize(notification:NSNotification)
+    func didChangeSize(notification:NSNotification)
     {
         self.appTableView.reloadData()
     }

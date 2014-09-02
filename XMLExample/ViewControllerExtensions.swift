@@ -11,12 +11,12 @@ import UIKit
 
 extension ViewController: UITableViewDataSource
 {
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.theApps.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cellIdentifier = "Cell"
         
@@ -30,14 +30,14 @@ extension ViewController: UITableViewDataSource
 }
 
 extension ViewController: UITableViewDelegate
-{
+    {
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
 extension ViewController: XMLParserNotifications
-{
+    {
     func didFinishParsingApps(apps:[App])
     {
         self.theApps = apps
