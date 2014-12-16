@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3F2F7FE1A406B580081E2FF /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B3F2F7FD1A406B580081E2FF /* .travis.yml */; };
 		DF2E342D199E58E6005CF5E0 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2E342C199E58E6005CF5E0 /* ViewControllerExtensions.swift */; };
 		DF51A5B2199A4E6B0096C132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF51A5B1199A4E6B0096C132 /* AppDelegate.swift */; };
 		DF51A5B4199A4E6B0096C132 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF51A5B3199A4E6B0096C132 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B3F2F7FD1A406B580081E2FF /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		DF2E342C199E58E6005CF5E0 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		DF51A5AC199A4E6B0096C132 /* XMLExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMLExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF51A5B0199A4E6B0096C132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				DFB4099319A364FF005E5752 /* License.md */,
+				B3F2F7FD1A406B580081E2FF /* .travis.yml */,
 				DF922A03199C3FF300B79DA9 /* README.md */,
 				DF51A5AE199A4E6B0096C132 /* XMLExample */,
 				DF51A5C1199A4E6B0096C132 /* XMLExampleTests */,
@@ -218,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F2F7FE1A406B580081E2FF /* .travis.yml in Resources */,
 				DF51A5B7199A4E6B0096C132 /* Main.storyboard in Resources */,
 				DF51A5B9199A4E6B0096C132 /* Images.xcassets in Resources */,
 			);

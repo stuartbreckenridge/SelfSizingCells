@@ -16,7 +16,7 @@ protocol XMLParserNotifications
 class XMLParser: NSObject, NSXMLParserDelegate {
    
     // Constants
-    let xmlURLEndpoint:NSURL = NSURL.URLWithString("http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=25/xml")
+    let xmlURLEndpoint:NSURL = NSURL(string:"http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=25/xml")!
     
     //Variables
     var aName = String()
@@ -30,7 +30,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     // MARK: Parse XML
     func parseXML()
     {
-        var xmlParser = NSXMLParser(contentsOfURL: xmlURLEndpoint)
+        var xmlParser:NSXMLParser = NSXMLParser(contentsOfURL: xmlURLEndpoint)!
         xmlParser.delegate = self
         xmlParser.shouldResolveExternalEntities = false
         xmlParser.parse()

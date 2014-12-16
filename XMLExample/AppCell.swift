@@ -20,10 +20,10 @@ class AppCell: UITableViewCell {
         // Initialization code
         
         // MARK: Required for self-sizing cells.
-        self.appName.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
-        self.appRights.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
-        self.appPrice.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
-        self.appSummary.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
+        self.appName.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
+        self.appRights.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
+        self.appPrice.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
+        self.appSummary.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -36,10 +36,10 @@ class AppCell: UITableViewCell {
         super.layoutSubviews()
         
         // MARK: Required for self-sizing cells and device orientation
-        self.appName.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
-        self.appRights.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
-        self.appPrice.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
-        self.appSummary.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)
+        self.appName.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
+        self.appRights.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
+        self.appPrice.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
+        self.appSummary.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)
     }
     
     func populateCell(#appData:App)

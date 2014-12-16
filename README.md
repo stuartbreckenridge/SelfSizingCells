@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/stuarticus/SelfSizingCells.svg)](https://travis-ci.org/stuarticus/SelfSizingCells)
+
 SwiftXMLandSelfSizingCells
 ==========================
 
@@ -20,13 +22,13 @@ In `func awakeFromNib()` and `func layoutSubviews()` there is code related to en
 
 `// MARK: Required for self-sizing cells.`
 
-`self.appName.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
+`self.appName.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)`
 
-`self.appRights.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
+`self.appRights.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)`
 
-`self.appPrice.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
+`self.appPrice.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)`
 
-`self.appSummary.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow.frame)`
+`self.appSummary.preferredMaxLayoutWidth = CGRectGetWidth(UIApplication.sharedApplication().keyWindow!.frame)`
 
 Commenting out any of the above will break self-sizing.
 
@@ -43,8 +45,7 @@ The following two lines of code are required for self-sizing cells:
 
 `appTableView.rowHeight = UITableViewAutomaticDimension`
 
-###Result:
-![Image](https://www.dropbox.com/s/npr771sgdqumyi6/iOS%20Simulator%20Screen%20Shot%2015%20Aug%202014%209.28.31%20am.png?dl=1)
+
 
 
 
