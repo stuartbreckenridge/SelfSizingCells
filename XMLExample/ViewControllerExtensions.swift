@@ -30,14 +30,14 @@ extension ViewController: UITableViewDataSource
 }
 
 extension ViewController: UITableViewDelegate
-    {
+{
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
 extension ViewController: XMLParserNotifications
-    {
+{
     func didFinishParsingApps(apps:[App])
     {
         self.theApps = apps

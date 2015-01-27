@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t0H-JQ-nW0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t0H-JQ-nW0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Apps-->
@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pV2-Mf-YSQ">
@@ -79,8 +79,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pV2-Mf-YSQ" secondAttribute="bottom" id="DXP-ti-e06"/>
-                            <constraint firstItem="pV2-Mf-YSQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="S3H-gG-qgn"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pV2-Mf-YSQ" secondAttribute="bottom" constant="-64" id="DXP-ti-e06"/>
+                            <constraint firstItem="pV2-Mf-YSQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="S3H-gG-qgn"/>
                             <constraint firstItem="pV2-Mf-YSQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="jni-9r-a4k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pV2-Mf-YSQ" secondAttribute="trailing" constant="-16" id="qee-dO-rCh"/>
                         </constraints>
@@ -99,7 +99,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t0H-JQ-nW0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QNe-7J-Tft">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="QNe-7J-Tft">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.28627450980392155" green="0.63137254901960782" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

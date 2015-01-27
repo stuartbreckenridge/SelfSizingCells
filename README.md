@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/stuarticus/SelfSizingCells.svg)](https://travis-ci.org/stuarticus/SelfSizingCells)
+[![Build Status](https://travis-ci.org/stuartbreckenridge/SelfSizingCells.svg?branch=master)](https://travis-ci.org/stuartbreckenridge/SelfSizingCells)
 
 SwiftXMLandSelfSizingCells
 ==========================
